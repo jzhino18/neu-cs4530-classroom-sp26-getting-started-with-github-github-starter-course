@@ -1,0 +1,29 @@
+Like in object and tuple types, you can use ? to mark parameters as optional. 
+
+array.filter(callback [, object])
+
+This shows the comma and the object are a package deal.
+
+////////////////////////////////
+// This is effectively what .reduce does internally:
+var total = 0; // The second ingredient (Initial Value)
+
+for (var i = 0; i < employees.length; i++) {
+    var record = employees[i]; // The current item
+    total = total + record.salary; // The logic inside your function
+}
+
+var totalSalary = total; // The final return
+
+////////////////////////////////
+add(1);            // Error TS2554: Expected 2 arguments, but got 1.
+add(1, 'a');       // Error TS2345: Argument of type '"a"' is not assignable
+
+// keep the type fo add(1,2);
+// to tst my memory, try to use 'let' & 'const' over 'var'
+
+Let's see how WE Keep THis Binding:
+
+
+
+
