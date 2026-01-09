@@ -1,0 +1,89 @@
+KEY POINTS:
+Usage: In TypeScript everything needs to have a type at compile time, and any is the default type when you (the programmer) and TypeScript (the typechecker) can’t figure out what type something is. It’s a last resort type, and you should avoid it when possible.
+
+Literal
+In addition to standard types like boolean or number, TypeScript also supports literal types. A literal type represents a specific value, not just a general type. If you try to modify them an error will be thrown.
+
+
+In modern TypeScript, you should avoid using var and prefer let or const instead.
+
+Objects
+Objects are similar to dictionaries with key-value pairs.
+Arrays are iterable Objects with the keys as numbers.
+Examples:
+
+// Avoid using 'any' type for objects
+const myObj: any = {
+    key1: 'value1',
+    key2: 'value2'
+};
+
+// For reusable objects, use interfaces (covered later)
+interface Person {
+    name: string;
+    age: number;
+}
+
+const person: Person = {
+    name: 'John',
+    age: 30
+};
+
+
+
+
+
+
+
+
+
+
+String
+String is the set of all strings and the things you can do with them like concatenate (+), slice (.slice),etc.
+
+Example:
+
+let a: string = 'hello'           // string
+let b: string = 'world'           // string
+let c: string = a + ' ' + b       // string
+
+Usage: Any functionality that requires the functionality of a string of characters.
+Here are a couple of string operations:
+
+charAt() : This method returns the character from the specified index. Characters in a string are indexed from left to right. The index of the first character is 0, and the index of the last character in a string, called stringName, is stringName.length – 1.
+
+////////////////////////////
+
+slice() : This method extracts a section of a string and returns a new string. Syntax:
+
+string.slice( beginSlice [, endSlice])
+
+split() : This method splits a String object into an array of strings by separating the string into substrings. Syntax:
+
+string.split([separator][, limit])
+
+concat(): This method adds two or more strings and returns a new single string. Syntax:
+
+string.concat(string2, string3[, ..., stringN])
+
+indexOf(): This method returns the index within the calling String object of the first occurrence of the specified value, starting the search at index or -1 if the value is not found. Syntax:
+
+string.indexOf(searchValue[, fromIndex])
+
+
+
+
+
+/////////////////////////////////
+Any
+The any data type is the super type of all types in TypeScript. It denotes a dynamic type. Using the any type is equivalent to opting out of type checking for a variable.
+
+
+
+Unknown
+Usage: For the few cases where you have a value whose type you really don’t know ahead of time, don’t use any, and instead reach for unknown. Like any, it represents any value, but TypeScript won’t let you use an unknown type until you refine it by checking what it is.
+
+
+
+
+
